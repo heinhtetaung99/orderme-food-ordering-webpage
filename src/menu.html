@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>OrderMe's Menu</title>
+  </head>
+  <!-- navbar start -->
+  <nav
+    class="flex bg-third z-20 s mx-auto items-center justify-between px-5 sticky top-0"
+  >
+    <a href="index.html">
+      <img class="" src="images/logo4.png" alt="logo" />
+    </a>
+    <div class="gap-3flex text-primary font-paragraph">
+      <input
+        class="menu-search-input px-5 my-2 rounded-md focus:outline-none focus:border-primary focus:border-2"
+        type="text"
+        id="search"
+      />
+      <label for="search">Search</label>
+    </div>
+    <div class="hidden md:flex">
+      <button class="cart-btn btn btn-secondary">Your Cart</button>
+    </div>
+
+    <div
+      class="menu-burger cursor-pointer md:hidden block transition-all duration-300"
+    >
+      <i class="fa-solid fa-cart-shopping text-slate-200"></i>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <section class="aside relative">
+    <div
+      class="menu-mobile-nav z-50 rounded-r-lg w-3/6 lg:w-2/6 p-5 backdrop-sepia-0 bg-third/90 text-slate-200 h-screen text-center text-sm transition-transform duration-500 fixed top-12"
+    >
+      <div class="cart-container">
+        <h2 class="cart-heading font-body text-xl p-5">Your cart</h2>
+        <!-- <div
+        class="cart-row p-5 flex justify-between gap-2 font-paragraph items-center border"
+      >
+        <h4 class="cart-title text-slate-200">${title}</h4>
+
+        <div class="flex items-center justify-between gap-5">
+          <p><span class="cart-price">${price}</span>MMK</p>
+          <input class="cart-input border text-slate-900 w-4/12 border-slate-900 px-2" type="number" min="0" value="1" />
+          <a class="cart-remove" href="#"><i class="fa-solid fa-trash-can"></i></a>
+        </div>
+      </div> -->
+      </div>
+      <div
+        class="container border-t-2 mx-auto flex justify-between font-paragraph font-semibold"
+      >
+        <h2 class="p-5">Total</h2>
+        <p class="p-5"><span class="cart-total-price"></span>MMK</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- hero menu start -->
+  <section id="hero-menu" class="menu-hero bg-[url('images/menu-bg.jpg')]">
+    <div
+      class="menu-intro mx-auto py-[6em] bg-fixed"
+      style="
+        background-image: url('images/menu-bg.jpg');
+        background-size: cover;
+      "
+    >
+      <div
+        class="justify-center lg:w-6/12 w-10/12 mx-auto text-slate-200 backdrop-sepia-0 bg-third/30 text-center"
+      >
+        <h1 class="py-10 font-heading font-semibold lg:text-[5rem] text-5xl">
+          Our Menu Here
+        </h1>
+        <p class="font-body lg:text-xl text-lg pb-10">
+          Super Delicious foods around you. Just Order It.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!--  menu section start -->
+  <section class="menu">
+    <div class="container mx-auto p-12">
+      <div class="menu-list">
+        <ul
+          class="flex justify-center text-sm lg:text-lg font-semibold bg-third lg:mx-0 mx-auto lg:p-4 p-[1.5em] lg:w-[100%] w-10/12 text-slate-200 font-paragraph gap-3 lg:gap-[6em] -translate-y-[5em] sticky top-0"
+        >
+          <a class="hover:underline" href="#burger-menu">Burger</a>
+          <a class="hover:underline" href="#pizza-menu">Pizza</a>
+          <a class="hover:underline" href="#sushi-menu">Sushi</a>
+          <a class="hover:underline" href="#pasta-menu">Pasta</a>
+          <a class="hover:underline" href="#desserts-menu">Desserts</a>
+          <a class="hover:underline" href="#drinks-menu">Drinks</a>
+        </ul>
+      </div>
+      <!--  menu nav end -->
+
+      <!-- burger menu start -->
+      <div
+        id="burger-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-200 font-semibold"
+          style="
+            background-image: url('images/burger-menu.jpg');
+            background-size: cover;
+          "
+        >
+          Burger
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              American Classic
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Beef, Cheese, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">8500</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Chicken Burger
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Chicken, Cheese, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">8500</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Angus Burger
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Angues Beef, Pickles, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">12000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Russian Special
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Beef, Cheese, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">10500</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Tranditional Beef
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Chicken, Cheese, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">8500</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Burger of a Month
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Angues Beef, Pickles, Potato, Onion, Fries</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">20000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- burger menu end -->
+
+      <!-- pizza menu start -->
+      <div
+        id="pizza-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-900 font-semibold"
+          style="
+            background-image: url('images/special-pizza.jpg');
+            background-size: cover;
+          "
+        >
+          Pizza
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Margherita</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Cheese, Champignon Mushrooms, Tomato, Spinaci</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Prosciutto</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Cheese, Champignon Mushroom, Prosciutto, Cucumber</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Salami</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Cheese, Champignon Mushroom, Broccoli, Chicken, Potato</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">8500</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- pizza menu end -->
+
+      <!-- sushi menu start -->
+      <div
+        id="sushi-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-200 font-semibold"
+          style="
+            background-image: url('images/sushi-menu.jpg');
+            background-size: cover;
+          "
+        >
+          Sushi
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Nigiri</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >A topping, usually fish, served on top of sushi rice</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Sashimi</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Fish or shellfish served alone (no rice)</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Maki</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Rice and filling wrapped in seaweed</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- sushi menu end -->
+
+      <!-- pasta menu start -->
+      <div
+        id="pasta-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-200 font-semibold"
+          style="
+            background-image: url('images/pasta-menu1.jpg');
+            background-size: cover;
+          "
+        >
+          Pasta
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Anelletti al forno
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Anelletti pasta, eggplant, meat sauce, cheese and peas</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Bigoli in salsa
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Whole-wheat bigoli pasta, with a sauce made salt-cured fish with
+              onion</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Bucatini all'amatriciana
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Bucatini pasta, with tomatoes, guanciale, Pecorino Romano
+              cheese.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- pasta menu end -->
+
+      <!-- desserts menu start -->
+      <div
+        id="desserts-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-900 font-semibold"
+          style="
+            background-image: url('images/desserts-menu.jpg');
+            background-size: cover;
+          "
+        >
+          Desserts
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Banbury cake
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Banbury cake
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">
+              Banbury cake
+            </h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">11000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- desserts menu end -->
+
+      <!-- drinks menu start -->
+      <div
+        id="drinks-menu"
+        class="menu-container menu-name border lg:mx-0 mx-auto lg:w-[100%] w-10/12 rounded-lg mb-10"
+      >
+        <h2
+          class="font-body p-10 text-5xl text-slate-900 font-semibold"
+          style="
+            background-image: url('images/drinks-menu.jpg');
+            background-size: cover;
+          "
+        >
+          Drinks
+        </h2>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Smoothee</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">3000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Coffee</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">4000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+
+        <ul
+          class="menu-item menu-name p-5 flex justify-between gap-10 font-paragraph items-center border"
+        >
+          <div>
+            <h4 class="menu-title text-slate-900 font-semibold">Wine</h4>
+            <small class="text-slate-400 lg:block hidden"
+              >Short, but intereseting description.</small
+            >
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <p><span class="menu-price">5000</span> MMK</p>
+            <button class="add-btn btn btn-primary border-slate-900 border-2">
+              <p class="lg:block hidden">Add to cart</p>
+              <p class="lg:hidden block">Add</p>
+            </button>
+          </div>
+        </ul>
+      </div>
+      <!-- drinks menu end -->
+    </div>
+  </section>
+  <!-- menu section end -->
+
+  <footer class="bg-third">
+    <div
+      class="bg-white rounded-b-md text-slate-900 mx-auto items-center container flex justify-center gap-10 lg:w-12/12 w-10/12"
+    >
+      <h2 class="font-paragraph text-center text-sm font-semibold">
+        Find Us on
+      </h2>
+      <ul class="list-none flex justify-between gap-10">
+        <li class="hover:scale-110 hover:text-primary ease-in duration-200">
+          <a target="_blank" href="https://www.facebook.com"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </li>
+        <li class="hover:scale-110 hover:text-primary ease-in duration-200">
+          <a target="_blank" href="https://www.twitter.com"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+        </li>
+        <li class="hover:scale-110 hover:text-primary ease-in duration-200">
+          <a target="_blank" href="https://www.instagram.com"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="container mx-auto flex lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center lg:py-5 py-3 lg:w-12/12 w-10/12 font-paragraph text-slate-200"
+    >
+      <ul class="gap-5 justify-center flex">
+        <a class="hover:underline" href="">Terms and Conditions</a>
+        <a class="hover:underline" href="">Policy</a>
+      </ul>
+      <a class="hover:scale-110 ease-in duration-200" href="#hero-menu">
+        <img src="images/logo4.png" alt="logo" />
+      </a>
+
+      <h4>@2022 Creathit Bootcamp MM</h4>
+    </div>
+  </footer>
+
+  <body>
+    <script src="app.js"></script>
+  </body>
+</html>

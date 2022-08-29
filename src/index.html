@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Order Me</title>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav
+      class="flex sticky top-0 z-20 s backdrop-sepia-0 bg-third/10 mx-auto items-center justify-between px-5"
+    >
+      <a href="#hero">
+        <img class="" src="images/logo4.png" alt="logo" />
+      </a>
+      <div class="hidden md:flex">
+        <ul
+          class="flex font-body items-center justify-between gap-10 text-primary text-md"
+        >
+          <li
+            class="hover:text-lg hover:font-semibold ease-in-out duration-300"
+          >
+            <a href="#hero">Home</a>
+          </li>
+          <li
+            class="hover:text-lg hover:font-semibold ease-in-out duration-300"
+          >
+            <a href="#about-us">About</a>
+          </li>
+          <li
+            class="hover:text-lg hover:font-semibold ease-in-out duration-300"
+          >
+            <a href="#contact-us">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hidden md:flex gap-10">
+        <button class="login-btn btn btn-primary text-primary">Sign In</button>
+      </div>
+      <div class="burger cursor-pointer md:hidden block">
+        <div class="w-8 h-[2px] bg-primary mb-2"></div>
+        <div class="w-8 h-[2px] bg-primary mb-2"></div>
+        <div class="w-8 h-[2px] bg-primary"></div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- aside start -->
+    <section class="aside relative">
+      <div
+        class="mobile-nav z-50 rounded-r-lg w-4/6 lg:w-1/6 p-5 backdrop-sepia-0 bg-third/90 text-slate-200 h-screen text-center text-sm transition-transform duration-500 fixed top-12"
+      >
+        <h2 class="text-center text-xl font-body">OrderMe</h2>
+
+        <ul class="text-left font-paragraph">
+          <li class="scroll-link py-4">
+            <a class="hover:text-secondary" href="#hero"
+              ><i class="fa-solid fa-circle text-xs text-slate-200"></i> Home</a
+            >
+          </li>
+          <li class="scroll-link py-4">
+            <a class="hover:text-secondary" href="#about-us"
+              ><i class="fa-solid fa-circle text-xs text-primary"></i> About
+              Us</a
+            >
+          </li>
+          <li class="scroll-link py-4">
+            <a class="hover:text-secondary" href="#contact-us"
+              ><i class="fa-solid fa-circle text-xs text-secondary"></i> Contact
+              Us</a
+            >
+          </li>
+          <li class="scroll-link py-4">
+            <a class="hover:text-secondary" href="menu.html"
+              ><i class="fa-solid fa-circle text-xs text-blue-900"></i> See More
+              Menu</a
+            >
+          </li>
+        </ul>
+
+        <div class="pt-5 container">
+          <form
+            action="loginForm"
+            class="login-form bg-third text-slate-900 text-sm font-semibold font-paragraph rounded-lg"
+          >
+            <input
+              class="my-2 rounded-md focus:outline-none focus:border-primary focus:border-2"
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              class="my-2 rounded-md focus:outline-none focus:border-primary focus:border-2"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              class="my-2 rounded-md focus:outline-none focus:border-primary focus:border-2"
+              type="text"
+              placeholder="Phone"
+            />
+            <div class="position">
+              <select
+                class="my-2 rounded-md focus:outline-none focus:border-primary focus:border-2"
+              >
+                <option value="0">To Become a Dasher</option>
+                <option value="1">To Become a Partner</option>
+                <option value="2">To Use my Coupon</option>
+                <option value="3">To Order</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary my-5">Sign Up</button>
+            <div class="pb-5">
+              <span class="text-slate-200">Already have an account?</span>
+              <a class="text-primary font-semibold" href="">Log in</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- aside end -->
+
+    <main>
+      <!-- hero section start -->
+      <section
+        id="hero"
+        class="hero flex container py-10 flex-wrap md:flex-nowrap mx-auto items-center justify-between gap-10"
+      >
+        <div class="hero-text md:w-6/12 text-center md:text-left px-5 sm:px-0">
+          <h1 class="font-heading text-secondary font-semibold text-6xl pb-10">
+            Most Delicious Foods in town
+          </h1>
+          <p class="font-body text-primary font-semibold text-lg pb-10">
+            If munching on something sweet and scrummy takes the edge of a
+            not-so-great-day, you are not even alone. When a craving hits, it's
+            nice to get exactly what you want.
+          </p>
+          <div
+            class="opacity-100 mb-10 border border-secondary md:w-[98%] w-[60%] md:mx-0 mx-auto"
+          ></div>
+          <a href="#food-menu">
+            <button class="font-body">See Menu</button>
+          </a>
+        </div>
+        <div class="hero-photo md:w-6/12">
+          <img src="images/hero-photo.png" alt="" />
+        </div>
+      </section>
+      <!-- hero section end -->
+
+      <!-- special offer start -->
+      <section class="special-offer bg-third">
+        <h2 class="text-center text-5xl pt-10 font-body text-slate-200">
+          Special Offers
+        </h2>
+        <div
+          class="container flex mx-auto py-[8em] overflow-x-scroll snap-x gap-[10em] justify-between snap-mandatory"
+        >
+          <div
+            class="justify-center flex flex-wrap lg:flex-nowrap snap-center lg:flex-[0_0_100%] flex-[0_0_80%] lg:px-0 px-10"
+          >
+            <img
+              class="lg:translate-x-12 lg:-translate-y-12 translate-x-12 translate-y-12"
+              src="images/special-burger.jpg"
+              alt=""
+            />
+            <div class="z-10 order-1 lg:order-none">
+              <div class="bg-slate-200 p-10">
+                <h3 class="pb-3 font-body text-5xl text-slate-900">
+                  Free Burger
+                </h3>
+                <p class="font-paragraph text-slate-700 pb-7">
+                  Get a free burger from orders higher than 15000 MMK!
+                </p>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only on weekends.
+                </li>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only higher than 15000.
+                </li>
+                <li class="text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Unless one burger in a cart.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mx-auto justify-center flex flex-wrap lg:flex-nowrap snap-center lg:flex-[0_0_100%] flex-[0_0_80%] lg:px-0 px-10"
+          >
+            <img
+              class="lg:translate-x-12 lg:-translate-y-12 translate-x-12 translate-y-12"
+              src="images/special-pizza.jpg"
+              alt=""
+            />
+            <div class="z-10 order-1 lg:order-none">
+              <div class="bg-slate-200 p-10">
+                <h3 class="pb-3 font-body text-5xl text-slate-900">
+                  Free Small Pizza
+                </h3>
+                <p class="font-paragraph text-slate-700 pb-7">
+                  Get a free small pizza from orders higher than 20000 MMK!
+                </p>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only on Wednesday.
+                </li>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only higher than 20000.
+                </li>
+                <li class="text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Unless one pizza in a cart.
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="mx-auto justify-center flex flex-wrap lg:flex-nowrap snap-center lg:flex-[0_0_100%] flex-[0_0_80%] lg:px-0 px-10"
+          >
+            <img
+              class="lg:translate-x-12 lg:-translate-y-12 translate-x-12 translate-y-12"
+              src="images/special-dish.jpg"
+              alt=""
+            />
+            <div class="z-10 order-1 lg:order-none">
+              <div class="bg-slate-200 p-10">
+                <h3 class="pb-3 font-body text-5xl text-slate-900">
+                  Chip Friday
+                </h3>
+                <p class="font-paragraph text-slate-700 pb-7">
+                  10% OFF for all dishes.
+                </p>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only on Friday.
+                </li>
+                <li class="pb-2 text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Only for dine-in.
+                </li>
+                <li class="text-slate-800 list-none">
+                  <i class="fa-solid fa-check text-primary"></i>
+                  Unless 2 dishes in a table.
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- special offer end -->
+
+      <!-- food menu section start -->
+      <section
+        id="food-menu"
+        class="food-menu text-slate-900 py-10 bg-gradient-to-r from-[#debe5c] to-[#fcdc95]"
+      >
+        <h2
+          class="text-5xl text-center text-slate-900 font-semibold font-body py-10"
+        >
+          Food Menu
+        </h2>
+        <div
+          class="container flex flex-wrap lg:justify-between justify-center gap-10 pt-10 lg:flex-nowrap mx-auto text-center"
+        >
+          <!-- cheese burger card start -->
+          <article
+            class="rounded-lg shadow-lg shadow-slate-900/50 p-5 bg-gradient-to-r from-slate-200 to-[#ccc] lg:w-[95%] w-[90%]"
+          >
+            <i class="fa-solid fa-burger text-6xl pb-3"></i>
+            <a href="menu.html">
+              <h3 class="font-heading text-4xl pb-3 font-semibold">
+                Cheese Burger
+              </h3>
+            </a>
+            <p class="font-paragraph text-slate-800 text-justify">
+              Our simple, classic cheeseburger begins with a 100% pure beef
+              burger seasoned with just a pinch of salt and pepper. The
+              OrderMe's Cheeseburger is topped with a tangy pickle, chopped
+              onions, ketchup, mustard, and a slice of melty American cheese.
+            </p>
+            <!-- <div class="pt-5 flex justify-between items-center">
+              <p class="font-semibold">4500 <span>MMK</span></p>
+              <button
+                class="btn-addToCart border border-slate-900 rounded-md py-1 px-2 bg-slate-900 text-white hover:bg-transparent hover:text-slate-900"
+              >
+                <i class="fa-solid fa-cart-plus text-lg"></i>
+              </button>
+            </div> -->
+          </article>
+          <!-- cheese burger card end -->
+
+          <!-- mexican pizza card start -->
+          <article
+            class="shadow-lg shadow-slate-900/50 rounded-lg p-5 bg-gradient-to-t from-slate-200 to-[#ccc] lg:w-[95%] w-[90%]"
+          >
+            <i class="fa-solid fa-pizza-slice text-6xl pb-3"></i>
+            <a href="menu.html">
+              <h3 class="font-heading text-4xl pb-3 font-semibold">
+                Mexican Pizza
+              </h3>
+            </a>
+            <p class="font-paragraph text-slate-800 text-justify">
+              The Mexican Pizza, originally called the Pizzazz Pizza, is a menu
+              item at the U.S.-based chain Taco Bell. It consists of two
+              tortillas with a filling of seasoned beef and refried beans,
+              topped with tomato sauce, three cheeses, and diced tomatoes.
+            </p>
+          </article>
+          <!-- mexican pizza card end -->
+
+          <!-- hot dog card start -->
+          <article
+            class="shadow-lg shadow-slate-900/50 rounded-lg p-5 bg-gradient-to-b from-slate-200 to-[#ccc] lg:w-[95%] w-[90%]"
+          >
+            <i class="fa-solid fa-hotdog text-6xl pb-3"></i>
+            <a href="menu.html">
+              <h3 class="font-heading text-4xl pb-3 font-semibold">Hot Dog</h3>
+            </a>
+            <p class="font-paragraph text-slate-800 text-justify">
+              What are hot dogs made of? Hot dogs are made from the emulsified
+              meat trimmings of chicken, beef, or pork. This meat mixture is
+              blended with other ingredients (like preservatives, spices, and
+              coloring) into a batter-like substance.
+            </p>
+          </article>
+          <!-- hot dog card end -->
+
+          <!-- classic coffee card start -->
+          <article
+            class="shadow-lg shadow-slate-900/50 rounded-lg p-5 bg-gradient-to-l from-slate-200 to-[#ccc] lg:w-[95%] w-[90%]"
+          >
+            <i class="food fa-solid fa-mug-hot text-6xl pb-3"></i>
+            <a href="menu.html">
+              <h3 class="font-heading text-4xl pb-3 font-semibold">
+                Classic Coffee
+              </h3>
+            </a>
+            <p class="font-paragraph text-slate-800 text-justify">
+              The unmistakable taste and aroma that we all know and love is
+              still as good as ever. Our signature coffee has a medium-dark
+              roast that gives it a full flavour and wonderfully invigorating
+              taste.
+            </p>
+          </article>
+          <!-- classic coffee card end -->
+        </div>
+        <div
+          class="container justify-center flex mx-auto py-[6em] items-center text-slate-900 lg:flex-nowrap flex-wrap sm:w-7/12 w-10/12"
+        >
+          <img class="pb-10 sm:pb-0" src="images/phone.png" alt="phone-app" />
+          <div class="">
+            <h2 class="text-4xl font-body font-semibold pb-5">
+              Get the OrderMe App
+            </h2>
+            <p class="font-paragraph text-lg text-slate-800 pb-5">
+              We will send you a link, open it on your phone and download the
+              app
+            </p>
+            <div class="flex gap-10 pb-10">
+              <input class="p-2 rounded-lg" placeholder="Email" type="email" />
+              <button class="btn btn-secondary">Get App Link</button>
+            </div>
+
+            <p class="font-paragraph font-semibold text-lg text-slate-800 pb-3">
+              Download app from
+            </p>
+            <div class="flex items-center gap-10">
+              <button
+                class="bg-gradient-to-l from-slate-200 to-[#ccc] rounded-lg hover:scale-110 ease-in-out duration-300"
+              >
+                <a
+                  class="p-1 flex items-center justify-center gap-2"
+                  href="https://www.apple.com/app-store/"
+                  target="_blank"
+                >
+                  <img
+                    class="w-1/4"
+                    src="images/appstore.png"
+                    alt="playstore"
+                  />
+                  <span class="font-paragraph font-bold text-lg"
+                    >App Store</span
+                  >
+                </a>
+              </button>
+              <button
+                class="bg-gradient-to-l from-slate-200 to-[#ccc] rounded-lg flex items-center justify-center hover:scale-110 ease-in-out duration-300"
+              >
+                <a
+                  class="p-1 flex items-center justify-center gap-2"
+                  href="https://play.google.com/store/apps"
+                  target="_blank"
+                >
+                  <img
+                    class="w-1/4"
+                    src="images/playstore.png"
+                    alt="playstore"
+                  />
+                  <span class="font-paragraph font-bold text-lg"
+                    >Play Store</span
+                  >
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- food menu section end -->
+
+      <!-- contact section start -->
+      <section id="about-us" class="contact bg-third py-[3em]">
+        <h1 class="text-5xl pt-5 text-center font-body text-slate-200">
+          About Us
+        </h1>
+        <div
+          class="container py-10 flex mx-auto lg:justify-between justify-center gap-10 flex-wrap lg:flex-nowrap lg:w-12/12 w-10/12"
+        >
+          <article class="text-center font-paragraph">
+            <img
+              class="mx-auto pb-5 hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+              src="images/live-ordering.png"
+              alt="driver"
+            />
+            <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+              Live Order Tracking
+            </h2>
+            <p class="text-1xl text-slate-700 pb-5">
+              Know where your order is at all times, from the restaurant to your
+              doorstep
+            </p>
+          </article>
+
+          <article class="text-center font-paragraph">
+            <img
+              class="mx-auto pb-5 hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+              src="images/order.png"
+              alt="driver"
+            />
+            <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+              No Minimum Order
+            </h2>
+            <p class="text-1xl text-slate-700 pb-5">
+              Order in for yourself or for the group, with no restrictions on
+              order value
+            </p>
+          </article>
+
+          <article class="text-center font-paragraph">
+            <img
+              class="mx-auto pb-5 hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+              src="images/fast-deliver.png"
+              alt="driver"
+            />
+            <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+              Lightning Fast Delivery
+            </h2>
+            <p class="text-1xl text-slate-700 pb-5">
+              Experience OrderMe's superfast delivery for food delivered fresh &
+              on time
+            </p>
+          </article>
+        </div>
+        <button class="flex justify-center mx-auto btn btn-secondary">
+          <a href="menu.html">Order Now</a>
+        </button>
+
+        <section id="contact-us" class="about-us pt-[3em]">
+          <h1 class="text-5xl pt-5 text-center font-body text-slate-300">
+            Contact Us
+          </h1>
+          <div
+            class="container py-10 flex mx-auto lg:justify-between justify-center gap-10 flex-wrap lg:flex-nowrap lg:w-12/12 w-10/12"
+          >
+            <article class="text-center justify-center font-paragraph">
+              <img
+                class="mx-auto hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+                src="images/driver.png"
+                alt="driver"
+              />
+              <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+                Become a Dasher
+              </h2>
+              <p class="text-1xl text-slate-700 pb-5">
+                As a delivery driver, you'll make reliable money—working
+                anytime, anywhere.
+              </p>
+              <a
+                class="cursor-pointer relative item-center text-sm text-primary"
+                href="#"
+              >
+                Start Earning <i class="fa-solid fa-arrow-right-long"></i>
+              </a>
+            </article>
+
+            <article class="text-center font-paragraph">
+              <img
+                class="mx-auto hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+                src="images/partner.png"
+                alt="driver"
+              />
+              <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+                Become a Partner
+              </h2>
+              <p class="text-1xl text-slate-700 pb-5">
+                Grow your business and reach new customers by partnering with
+                us.
+              </p>
+              <a class="item-center text-sm text-primary" href=""
+                >Sign up your store <i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </article>
+
+            <article class="text-center font-paragraph">
+              <img
+                class="mx-auto hover:scale-110 hover:cursor-pointer ease-in-out duration-300"
+                src="images/coupon.png"
+                alt="driver"
+              />
+              <h2 class="text-3xl font-semibold text-slate-300 pb-5">
+                Order with Discount
+              </h2>
+              <p class="text-1xl text-slate-700 pb-5">
+                OrderMe coupon cards are only available on weekends and don't
+                miss a chance to use it.
+              </p>
+              <a class="item-center text-sm text-primary" href=""
+                >Use your Coupon <i class="fa-solid fa-arrow-right-long"></i
+              ></a>
+            </article>
+          </div>
+          <div
+            class="bg-primary text-slate-200 mx-auto items-center container flex justify-center gap-10 lg:w-12/12 w-10/12"
+          >
+            <h2 class="font-paragraph text-center text-sm font-semibold">
+              Find Us on
+            </h2>
+            <ul class="list-none flex justify-between gap-10">
+              <li
+                class="hover:scale-110 hover:text-slate-900 ease-in duration-200"
+              >
+                <a target="_blank" href="https://www.facebook.com"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+              </li>
+              <li
+                class="hover:scale-110 hover:text-slate-900 ease-in duration-200"
+              >
+                <a target="_blank" href="https://www.twitter.com"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li
+                class="hover:scale-110 hover:text-slate-900 ease-in duration-200"
+              >
+                <a target="_blank" href="https://www.instagram.com"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <footer class="bg-third">
+        <div
+          class="container mx-auto flex lg:flex-nowrap flex-wrap lg:justify-between justify-center items-center lg:py-5 py-3 lg:w-12/12 w-10/12 font-paragraph text-slate-200"
+        >
+          <ul class="gap-5 justify-center flex">
+            <a class="hover:underline" href="">Terms and Conditions</a>
+            <a class="hover:underline" href="">Policy</a>
+          </ul>
+          <a class="hover:scale-110 ease-in duration-200" href="#hero">
+            <img src="images/logo4.png" alt="logo" />
+          </a>
+
+          <h4>@2022 Creathit Bootcamp MM</h4>
+        </div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
